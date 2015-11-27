@@ -226,7 +226,7 @@ static void RegisterReplyCallback(
             name = @"";
         }
     
-        errorCode = DNSServiceRegister(&self->sdRef_, kDNSServiceFlagsNoAutoRename, kDNSServiceInterfaceIndexAny, [name UTF8String], [self.type UTF8String], [domain UTF8String], NULL, htons(self.port), 0, NULL, RegisterReplyCallback, self);
+        errorCode = DNSServiceRegister(&self->sdRef_, 0, kDNSServiceInterfaceIndexAny, [name UTF8String], [self.type UTF8String], [domain UTF8String], NULL, htons(self.port), 0, NULL, RegisterReplyCallback, self);
         if (errorCode == kDNSServiceErr_NoError) {
             errorCode = DNSServiceSetDispatchQueue(self.sdRef, dispatch_get_main_queue());
         }

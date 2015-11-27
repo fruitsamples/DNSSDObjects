@@ -1,6 +1,6 @@
 Read Me About DNSSDObjects
 ==========================
-1.0
+1.1
 
 DNSSDObjects shows how to integrate the DNS-SD API into Cocoa code.  The techniques it shows are useful when the existing high-level Bonjour APIs (NSNetService and CFNetService) don't provide enough flexibility to meet your needs.  For example, the high-level Bonjour APIs always register and browse on all network interfaces; if you want to browse or register on a specific interface, you have to use the DNS-SD API, and this sample will make that transition easier.
 
@@ -102,9 +102,11 @@ If you find any problems with this sample, please file a bug against it.
 
 1.0 (Dec 2011) was the first shipping version.
 
+1.1 (Dec 2011) fixes a bug that disabled auto-rename for service registration objects.
+
 Share and Enjoy
 
 Apple Developer Technical Support
 Core OS/Hardware
 
-2 Dec 2011
+13 Dec 2011
